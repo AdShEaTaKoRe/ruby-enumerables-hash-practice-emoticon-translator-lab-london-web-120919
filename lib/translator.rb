@@ -6,7 +6,7 @@ def load_library(path)
   
   emoticons = {
     :get_meaning => lib.reduce({}) { |memo, (meaning, emotes)|
-      memo[emotes[1]] = {}
+      memo[emotes[1]] = meaning
       memo
     },
     :get_emoticon => {}
