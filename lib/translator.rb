@@ -31,10 +31,5 @@ def get_japanese_emoticon(path, emoticon)
 end
 
 def get_english_meaning(path, emoticon)
-  lib = load_library(path)
-  if lib[:get_meaning][emoticon]
-    return lib[:get_meaning][emoticon]
-  else
-    return "Sorry, that emoticon was not found"
-  end
+  get_emoticon_data(path, emoticon, :get_meaning)
 end
