@@ -4,7 +4,7 @@ def load_library(path)
   lib = YAML.load_file(path)
   
   emoticons = {
-    :get_meaning => {},
+    :get_meaning => ,
     :get_emoticon => {}
   }
 end
