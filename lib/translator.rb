@@ -1,4 +1,5 @@
 require "yaml"
+require "pp"
 
 def load_library(path)
   lib = YAML.load_file(path)
@@ -10,6 +11,8 @@ def load_library(path)
     },
     :get_emoticon => {}
   }
+  
+  pp emoticons
 end
 
 def get_japanese_emoticon
