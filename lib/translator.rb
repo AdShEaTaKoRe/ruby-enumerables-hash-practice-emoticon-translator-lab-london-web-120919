@@ -17,19 +17,20 @@ def load_library(path)
   
 end
 
-def get_emoticon_data(path, emoticon, data)
+def get_japanese_emoticon(path, emoticon)
   lib = load_library(path)
-  if lib[data][emoticon]
-    return lib[data][emoticon]
+  if lib[:get_emoticon][emoticon]
+    return lib[:get_emoticon][emoticon]
   else
     return "Sorry, that emoticon was not found"
   end
 end
 
-def get_japanese_emoticon(path, emoticon)
-  get_emoticon_data(path, emoticon, :get_emoticon)
-end
-
 def get_english_meaning(path, emoticon)
-  get_emoticon_data(path, emoticon, :get_meaning)
+  lib = load_library(path)
+  if lib[:get_meaning][emoticon]
+    return lib[:get_meaning][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
